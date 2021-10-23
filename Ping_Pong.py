@@ -20,6 +20,8 @@ class Sprite:
 
     def reset(self):
         mw.blit(self.image, (self.rect.x, self.rect.y))
+        
+#qwqwqwqwqwqwqwqwq
 
 class Rockets(Sprite):
     #def __init__(self, image_name, x, y, width,
