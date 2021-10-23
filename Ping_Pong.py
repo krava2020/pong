@@ -29,7 +29,9 @@ class Rockets(Sprite):
         #super().__init__(self, image_name, x, y, width, hight, speed)
         #self.b_speed1 = ball_speed1
         #self.b_speed2 = ball_speed2
-
+    def instant_(self):
+        self.spped_x = 3
+        self.speed_y = 3
     def rocket_l(self):
         key_ = pygame.key.get_pressed()
         if key_[pygame.K_w] and self.rect.y > 0:
@@ -59,6 +61,7 @@ class Rockets(Sprite):
 rct_l = Rockets('rc.png', 5, 0, 16, 106, 3)
 rct_r = Rockets('rc.png', mw_w - 20, 0, 16, 106, 3)
 ball = Rockets('ball.png', 220, 4, 26, 26, 5)
+ball.instand_()
 
 game = True
 speed1 = 3
@@ -84,6 +87,9 @@ while game:
 
     if ball.rect.y > mw_h - 26 or ball.rect.y < 0:
         speed2 *= -1
+
+    if pygame.sprite.collide_rect
+
 
     rct_l.reset()
     rct_r.reset()
